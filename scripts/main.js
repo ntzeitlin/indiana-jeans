@@ -1,10 +1,21 @@
+import { PageFooter } from "./Footer.js"
 import { OwnsJeansChoices } from "./OwnsJeans.js"
+import { LocationTypeChoices } from "./UrbanDweller.js"
 
 const container = document.querySelector("#container")
+const footer = document.querySelector("#footer")
 
-const render = () => {
+const render = async () => {
     const jeansOwnershipHTML = OwnsJeansChoices()
-    container.innerHTML = jeansOwnershipHTML
+    const locationsHTML = await LocationTypeChoices()
+
+    container.innerHTML = `
+    ${jeansOwnershipHTML}
+    ${locationsHTML}
+    `
+
+    const footerHTML = PageFooter()
+    footer.innerHTML = footerHTML
 }
 
 render()
