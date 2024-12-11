@@ -24,4 +24,6 @@ const render = async () => {
     footer.innerHTML = footerHTML
 }
 
+document.addEventListener("newSubmissionCreated", render)
+
 render()
