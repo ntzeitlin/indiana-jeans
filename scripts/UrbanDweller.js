@@ -18,6 +18,6 @@ export const LocationTypeChoices = async () => {
     // for (const location of locations) {
     //     choicesHTML += `<input type='radio' name='location' value="${location.id}"/> ${location.label}`
     // }
-    choicesHTML += locations.map(location => `<input type='radio' name='location' value="${location.id}"/> ${location.label}`)
+    choicesHTML += locations.map(location => `<input type='radio' name='location' value="${location.id}"/> ${location.label}`).join("")
     return choicesHTML
 }
